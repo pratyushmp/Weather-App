@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
   var assets = 'assets/sunny.gif';
   var color;
   Future getWeather () async {
-    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q=Bengaluru&units=metric&appid=09330ce35c6a91213190b60b0a198e6e");
+    http.Response response = await http.get("http://api.openweathermap.org/data/2.5/weather?q=Bengaluru&units=metric&appid=[enter your API id]");
     var results = jsonDecode(response.body);
     setState(() {
       this.temp = results['main']['temp'];
